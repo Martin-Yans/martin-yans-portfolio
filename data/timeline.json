@@ -1,0 +1,35 @@
+[
+  {
+    "date": "Août à Septembre 2024",
+    "title": "Employé à Menissez",
+    "description": [
+      "Nettoyer l’espace de travail",
+      "Emballage de pain",
+      "Transport des marchandise"
+    ],
+    "image": "assets/images/parcours/menissez.png"
+  },
+  {
+    "date": "Juillet 2023",
+    "title": "Employé au centre de loisir à Bachant",
+    "subtitle": "Animateur de centre de loisir",
+    "description": [
+      "Animation d’enfant entre 10 et 12 ans",
+      "Création de grand jeu et d’activité",
+      "Compréhension des dangers"
+    ],
+    "image": "assets/images/parcours/cdl.png"
+  },
+  {
+    "date": "Octobre 2021",
+    "title": "Stage à Jeumont Électrique",
+    "description": [
+      "Bureau d’étude",
+      "Achat",
+      "Informatique",
+      "Laboratoire",
+      "Finance"
+    ],
+    "image": "assets/images/parcours/JE.jpg"
+  }
+]

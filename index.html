@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#212529" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; object-src 'none'; base-uri 'self';">
+    <title>Portfolio — Mes projets</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="container">
+                <a href="#" class="nav-brand">Martin YANS</a>
+                <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav-toggle-icon"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="#about" class="nav-link">À propos</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projets</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li class="nav-item"><a href="#parcours" class="nav-link">Parcours</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+
+
+                    
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-section">
+            <div class="hero-content container">
+                <h1 class="hero-title">Vous cherchez un<br>développeur ?</h1>
+                <hr class="hero-divider">
+                <p class="hero-subtitle">Ça tombe bien ! Le développement informatique, est un domaine qui me passionne.<br>J’aime coder et je fais toujours en sorte que mes solutions soient bien faites,<br>efficaces et faciles à comprendre. Mon but, créer des projets qui tiennent dans le<br>temps et qui puissent évoluer sans problème.</p>
+                <div class="hero-actions">
+                    <a href="#about" class="btn">À propos de moi</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <main class="main">
+
+        <!-- ============================================ -->
+        <!--                    ABOUT                     -->
+        <!-- ============================================ -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>À propos de moi</h2>
+                <p>Bienvenue sur mon portfolio. Je m’appelle Martin Yans, j’ai 19 ans et je suis étudiant en informatique. Passionné par le développement informatique, domaine dans lequel je m’épanouis pleinement, je suis quelqu'un d'autonome, dynamique et polyvalente.</p>
+            </div>
+        </section>
+
+
+
+        <!-- ============================================ -->
+        <!--                    PROJECTS                  -->
+        <!-- ============================================ -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projets Récents</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="carousel-viewport" role="region" aria-label="Carousel de projets">
+                            <button class="carousel-btn prev" aria-label="Projet précédent">‹</button>
+                            <div id="projects-grid" class="carousel-track" aria-live="polite" role="list"></div>
+                            <button class="carousel-btn next" aria-label="Projet suivant">›</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <template id="project-template">
+                <article class="card project-card" tabindex="0" role="listitem">
+                    <div class="card-media">
+                        <img class="project-image" src="" alt="" width="400" height="280" loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="project-title"></h3>
+                        <p class="project-desc"></p>
+                        <div class="project-meta">
+                            <div class="tags"></div>
+                            <span class="project-link" aria-hidden="true">Détails</span>
+                        </div>
+                    </div>
+                </article>
+            </template>
+        </section>
+
+        <!-- ============================================ -->
+        <!--                    COMPETENCES               -->
+        <!-- ============================================ -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Mes Compétences</h2>
+                <div class="skills-columns">
+                    <!-- Colonne Expérimenté -->
+                    <div class="skills-col">
+                        <h3>Expérimenté</h3>
+                        <div class="skills-list">
+                            <a href="https://fr.wikipedia.org/wiki/Go_(langage)" target="_blank" class="skill-item">
+                                <img src="assets/images/logo/golang.png" alt="Golang" loading="lazy">
+                                <span>Golang</span>
+                            </a>
+                            <a href="https://fr.wikipedia.org/wiki/Kotlin (langage)" target="_blank" class="skill-item">
+                                <img src="assets/images/logo/kotlin.jpg" alt="Kotlin" loading="lazy">
+                                <span>Kotlin</span>
+                            </a>
+                            <a href="https://fr.wikipedia.org/wiki/Unreal_Engine" target="_blank" class="skill-item">
+                                <img src="assets/images/logo/UE5.png" alt="Unreal Engine 5" loading="lazy">
+                                <span>UE5</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Colonne En cours de développement -->
+                    <div class="skills-col">
+                        <h3>En cours de développement</h3>
+                        <div class="skills-list">
+                            <a href="https://fr.wikipedia.org/wiki/Python_(langage)" target="_blank" class="skill-item">
+                                <img src="assets/images/logo/python.jpg" alt="Python" loading="lazy">
+                                <span>Python</span>
+                            </a>
+                            <a href="https://fr.wikipedia.org/wiki/Oracle_Database" target="_blank" class="skill-item">
+                                <img src="assets/images/logo/oracle.png" alt="Oracle" loading="lazy">
+                                <span>Oracle</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--                    PARCOURS                  -->
+        <!-- ============================================ -->
+        <section id="parcours" class="section">
+            <div class="container">
+                <div class="parcours-header">
+                    <span class="subtitle">Mon parcours</span>
+                    <h2>Formation & Expérience</h2>
+                    <p>Un aperçu de mon parcours professionnel et académique, mettant en avant les étapes clés de ma carrière.</p>
+                </div>
+                <div class="timeline-container">
+                    <!-- Les éléments de la timeline seront injectés ici par JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--                    CONTACT                   -->
+        <!-- ============================================ -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Intéressé par mon profil ? Discutons de votre projet.</p>
+                <div class="contact-links">
+                    <a href="https://github.com/Martin-Yans" target="_blank" rel="noopener noreferrer" class="contact-icon" aria-label="Mon profil GitHub">
+                        <img src="assets/images/contact/github.png" alt="GitHub" width="48" height="48" loading="lazy">
+                    </a>
+                    <a href="https://www.linkedin.com/in/martin-yans-682582329" target="_blank" rel="noopener noreferrer" class="contact-icon" aria-label="Mon profil LinkedIn">
+                        <img src="assets/images/contact/linkedin.png" alt="LinkedIn" width="48" height="48" loading="lazy">
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yans.martin59600@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-icon" aria-label="M'envoyer un email sur Gmail">
+                        <img src="assets/images/contact/Mail.png" alt="Email" width="48" height="48" loading="lazy">
+                    </a>
+                </div>
+                <p class="contact-email">yans.martin59600@gmail.com</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <small>© 2025 — Prénom Nom. Tous droits réservés.</small>
+        </div>
+    </footer>
+
+    <dialog id="project-modal" class="project-modal" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Fermer la boîte d'information" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <article class="modal-project">
+                <div class="modal-image-wrapper">
+                    <img id="modal-image" class="modal-image" src="" alt="" loading="lazy" />
+                </div>
+                <div class="modal-body">
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <div class="modal-tags" aria-label="Tags du projet"></div>
+                    <p id="modal-description" class="modal-description"></p>
+                    <div class="modal-actions">
+                        <a id="modal-link" class="btn modal-link-btn" href="#" target="_blank" rel="noopener noreferrer">
+                            Voir le projet
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </dialog>
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/timeline.js"></script>
+</body>
+</html>

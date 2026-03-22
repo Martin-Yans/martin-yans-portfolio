@@ -1,0 +1,45 @@
+[
+  {
+    "title": "danceOfFireAndiceGame",
+    "description": "Reproduction d'un jeu de rythme exigeant une synchronisation parfaite. Conçu en Kotlin, le projet met en avant la gestion précise des actions dans le temps et la réactivité de l'interface.",
+    "tags": [
+      "en cours",
+      "kotlin",
+      "interface"
+    ],
+    "link": "https://github.com/Martin-Yans/danceOfFireAndIceGame",
+    "image": "assets/images/projet/danceOfFireAndIceImg.png"
+  },
+  {
+    "title": "demineur",
+    "description": "Reprise du célèbre jeu de réflexion, intégrant une logique complexe de détection de proximité (récursivité) et une interface utilisateur claire et intuitive, développée en Kotlin.",
+    "tags": [
+      "kotlin",
+      "logique",
+      "interface"
+    ],
+    "link": "https://github.com/Martin-Yans/Demineur",
+    "image": "assets/images/projet/demineurImg.png"
+  },
+  {
+    "title": "projet particule",
+    "description": "Moteur de simulation physique de particules développé en Go. L'accent a été mis sur l'optimisation des performances mathématiques pour calculer le comportement de nombreuses entités en simultané.",
+    "tags": [
+      "golang",
+      "optimisation",
+      "logique"
+    ],
+    "link": "https://github.com/Martin-Yans/particule-project",
+    "image": "assets/images/projet/particule-projectIMG.png"
+  },
+  {
+    "title": "capital-clicker",
+    "description": "Jeu de gestion incrémental de type \"Clicker\" programmé en Go. Le projet illustre la gestion des boucles de jeu, l'évolution des statistiques et l'actualisation dynamique de l'interface.",
+    "tags": [
+      "golang",
+      "interface"
+    ],
+    "link": "https://github.com/Martin-Yans/particule-project",
+    "image": "assets/images/projet/capital-clickerIMG.png"
+  }
+]
