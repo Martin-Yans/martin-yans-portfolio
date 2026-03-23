@@ -108,25 +108,30 @@ export function initTextAnimation(selector, baseDelay = 0, delayIncrement = 0.05
     let newHtml = '';
     
     // This regex splits the HTML into tags and text nodes
-    const parts = html.split(/(<[^>]*>)/g);
+    const parts = html.split(/(<br\s*\/?>)/gi);
     
     let delay = baseDelay;
     
     parts.forEach(part => {
-      if (part.startsWith('<')) {
-        // It's an HTML tag, just append it
+      if (part.match(/<br\s*\/?>/gi)) {
+        // It's a <br> tag, just append it
         newHtml += part;
       } else {
-        // It's text, split it by characters
-        // Use Array.from to correctly handle emojis/special characters
-        const chars = Array.from(part);
-        chars.forEach(char => {
-          if (char === ' ') {
+        // It's text, split it by words
+        const words = part.split(' ');
+        words.forEach((word, index) => {
+          if (word) {
+            newHtml += `<span class="word-wrapper">`;
+            const chars = Array.from(word);
+            chars.forEach(char => {
+              newHtml += `<span class="letter-animate" style="animation-delay: ${delay}s">${char}</span>`;
+              delay += delayIncrement;
+            });
+            newHtml += `</span>`;
+          }
+          // Add space between words, but not at the end of the line
+          if (index < words.length - 1) {
             newHtml += ' ';
-          } else {
-            // Apply a non-breaking space for actual spaces to maintain layout, or just wrap characters
-            newHtml += `<span class="letter-animate" style="animation-delay: ${delay}s">${char}</span>`;
-            delay += delayIncrement;
           }
         });
       }

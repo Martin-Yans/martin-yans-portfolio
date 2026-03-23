@@ -29,6 +29,7 @@ export const ProjectRenderer = {
             const img = node.querySelector('.project-image');
             img.src = project.image || '';
             img.alt = project.title || '';
+            img.draggable = false; // Empêche le glisser-déposer natif
             node.querySelector('.project-title').textContent = project.title;
             node.querySelector('.project-desc').textContent = project.description;
             node.querySelector('.tags').textContent = (project.tags || []).join(' • ');

@@ -35,16 +35,21 @@
   margin: 0;
 }
 
+.word-wrapper {
+  display: inline-block;
+  white-space: nowrap; /* Empêche le mot de se couper */
+}
+
 /* Animation pour les lettres du titre */
 .letter-animate {
   display: inline-block;
   opacity: 0;
-  animation: fadeScale 0.4s var(--easing-premium) forwards;
+  animation: fadeSlideUp 0.5s var(--easing-premium) forwards;
 }
 
-@keyframes fadeScale {
-  from { opacity: 0; transform: scale(0.5); }
-  to { opacity: 1; transform: scale(1); }
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(1em); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-divider {
@@ -106,6 +111,11 @@
   line-height: 1.7;
 }
 
+#about.section {
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  min-height: 400px;
+}
 
 /* ══════════════════════════════════════════════════════════════════════════ */
 /* SKILLS SECTION                                                             */
@@ -237,8 +247,8 @@
 }
 
 .contact-icon img {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -254,7 +264,7 @@
   margin-top: var(--spacing-lg);
   font-family: var(--font-primary);
   font-weight: 600;
-  font-size: var(--font-size-sm); /* Taille volontairement plus petite (0.875rem = 14px) */
+  font-size: var(--font-size-md); /* Taille volontairement plus petite (0.875rem = 14px) */
   color: var(--color-text-primary);
   user-select: all; /* Permet de sélectionner tout le texte en un clic pour le copier facilement */
 }
