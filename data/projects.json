@@ -1,7 +1,7 @@
 [
   {
     "title": "Jeu de la vie",
-    "description": "Reproduction d'un jeu de rythme exigeant une synchronisation parfaite. Conçu en Kotlin, le projet met en avant la gestion précise des actions dans le temps et la réactivité de l'interface.",
+    "description": "Simulation fondée sur un algorithme génétique où des cellules progressent par cycles itératifs. Le programme choisit les 50 meilleurs individus de chaque génération (sur un total de 100 itérations ou basé sur un critère de survie) et met en œuvre des mutations afin d'améliorer les performances de la prochaine génération.",
     "tags": [
       "en cours",
       "python",
@@ -12,7 +12,7 @@
   },
   {
     "title": "NAS personnel + site web",
-    "description": "Mise en place d'une solution de stockage réseau (NAS) couplée à l'hébergement d'un site web local. Ce projet se concentre sur l'administration système, la gestion des protocoles réseau et la structure HTML pour l'interface de consultation.",
+    "description": "Mise en place d'une solution de stockage réseau (NAS) couplée à l'hébergement d'un site web. Ce projet se concentre sur l'administration système, la gestion des protocoles réseau et la structure HTML pour l'interface de consultation.",
     "tags": [
       "réseau",
       "html"
