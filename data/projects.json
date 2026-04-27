@@ -1,7 +1,7 @@
 [
   {
     "title": "Jeu de la vie",
-    "description": "Simulation fondée sur un algorithme génétique où des cellules progressent par cycles itératifs. Le programme choisit les 50 meilleurs individus de chaque génération (sur un total de 100 itérations ou basé sur un critère de survie) et met en œuvre des mutations afin d'améliorer les performances de la prochaine génération.",
+    "description": "Simulation fondée sur un algorithme génétique où des cellules progressent par cycles itératifs. Le programme choisit les 50 meilleurs individus de chaque génération et met en œuvre des mutations afin d'améliorer les performances de la prochaine génération.",
     "tags": [
       "en cours",
       "python",
@@ -61,5 +61,6 @@
     ],
     "link": "https://github.com/Martin-Yans/particule-project",
     "image": "assets/images/projet/capital-clickerImg.png"
+    
   }
 ]
