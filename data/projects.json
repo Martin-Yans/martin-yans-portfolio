@@ -1,9 +1,29 @@
 [
   {
-    "title": "danceOfFireAndiceGame",
+    "title": "Jeu de la vie",
     "description": "Reproduction d'un jeu de rythme exigeant une synchronisation parfaite. Conçu en Kotlin, le projet met en avant la gestion précise des actions dans le temps et la réactivité de l'interface.",
     "tags": [
       "en cours",
+      "python",
+      "matplotlib(python)"
+    ],
+    "link": "https://github.com/Martin-Yans/gameOfLive",
+    "image": "assets/images/projet/gameOfLiveImg.png"
+  },
+  {
+    "title": "NAS personnel + site web",
+    "description": "Mise en place d'une solution de stockage réseau (NAS) couplée à l'hébergement d'un site web local. Ce projet se concentre sur l'administration système, la gestion des protocoles réseau et la structure HTML pour l'interface de consultation.",
+    "tags": [
+      "réseau",
+      "html"
+    ],
+    "link": "https://github.com/Martin-Yans/siteLocalWeb",
+    "image": "assets/images/projet/interieurImg.jpg"
+  },
+  {
+    "title": "dance Of fire and ice game",
+    "description": "Reproduction d'un jeu de rythme exigeant une synchronisation parfaite. Conçu en Kotlin, le projet met en avant la gestion précise des actions dans le temps et la réactivité de l'interface.",
+    "tags": [
       "kotlin",
       "interface"
     ],
@@ -30,7 +50,7 @@
       "logique"
     ],
     "link": "https://github.com/Martin-Yans/particule-project",
-    "image": "assets/images/projet/particule-projectIMG.png"
+    "image": "assets/images/projet/particule-projectImg.png"
   },
   {
     "title": "capital-clicker",
@@ -40,6 +60,6 @@
       "interface"
     ],
     "link": "https://github.com/Martin-Yans/particule-project",
-    "image": "assets/images/projet/capital-clickerIMG.png"
+    "image": "assets/images/projet/capital-clickerImg.png"
   }
 ]
