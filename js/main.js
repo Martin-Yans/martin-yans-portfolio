@@ -20,8 +20,8 @@ async function initializeApplication() {
     projectModal.init();
     
     // Initialize text animations
-    initTextAnimation('.hero-title',0 , 0.005); // Vitesse par défaut (0.05s par lettre)
-    initTextAnimation('.hero-subtitle', 0, 0.01); // Très rapide (0.015s par lettre)
+    initTextAnimation('.hero-title',0 , 0.001); // Vitesse par défaut (0.05s par lettre)
+    initTextAnimation('.hero-subtitle', 0, 0.005); // Très rapide (0.015s par lettre)
     
     // Skills animation observer
     const skillsObserver = new IntersectionObserver((entries) => {
