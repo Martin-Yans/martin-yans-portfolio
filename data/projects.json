@@ -21,7 +21,7 @@
     "image": "assets/images/projet/interieurImg.jpg"
   },
   {
-    "title": "dance Of fire and ice game",
+    "title": "Dance Of fire and ice game",
     "description": "Reproduction d'un jeu de rythme exigeant une synchronisation parfaite. Conçu en Kotlin, le projet met en avant la gestion précise des actions dans le temps et la réactivité de l'interface.",
     "tags": [
       "kotlin",
@@ -31,7 +31,7 @@
     "image": "assets/images/projet/danceOfFireAndIceImg.png"
   },
   {
-    "title": "demineur",
+    "title": "Demineur",
     "description": "Reprise du célèbre jeu de réflexion, intégrant une logique complexe de détection de proximité (récursivité) et une interface utilisateur claire et intuitive, développée en Kotlin.",
     "tags": [
       "kotlin",
@@ -42,7 +42,7 @@
     "image": "assets/images/projet/demineurImg.png"
   },
   {
-    "title": "projet particule",
+    "title": "Projet particule",
     "description": "Moteur de simulation physique de particules développé en Go. L'accent a été mis sur l'optimisation des performances mathématiques pour calculer le comportement de nombreuses entités en simultané.",
     "tags": [
       "golang",
@@ -53,7 +53,7 @@
     "image": "assets/images/projet/particule-projectImg.png"
   },
   {
-    "title": "capital-clicker",
+    "title": "Capital-clicker",
     "description": "Jeu de gestion incrémental de type \"Clicker\" programmé en Go. Le projet illustre la gestion des boucles de jeu, l'évolution des statistiques et l'actualisation dynamique de l'interface.",
     "tags": [
       "golang",

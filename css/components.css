@@ -535,10 +535,12 @@
 
 .carousel-viewport .carousel-btn.next {
   right: var(--page-h-margin);
+  transform: translateX(-10%);
 }
 
 .carousel-viewport .carousel-btn.prev {
   left: var(--page-h-margin);
+    transform: translateX(10%);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════ */
@@ -651,6 +653,7 @@
   margin: 0 0 var(--spacing-sm);
   font-size: var(--font-size-xl);
   font-family: var(--font-heading);
+  color: var(--color-text-primary);
 }
 
 .modal-tags {
