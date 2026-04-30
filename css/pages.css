@@ -269,12 +269,64 @@
 }
 
 .contact-email {
-  margin-top: var(--spacing-lg);
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: var(--spacing-lg) auto 0;
+  padding: var(--spacing-xs) var(--spacing-sm);
   font-family: var(--font-primary);
   font-weight: 600;
   font-size: var(--font-size-md); /* Taille volontairement plus petite (0.875rem = 14px) */
   color: var(--color-text-primary);
-  user-select: all; /* Permet de sélectionner tout le texte en un clic pour le copier facilement */
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color var(--transition-fast, 0.2s ease);
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+}
+
+.contact-email:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-email:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  z-index: 10000;
+  max-width: min(90vw, 360px);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  text-align: center;
+  background: var(--color-bg-card, #2d3139);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transform: translate(-50%, 12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
+}
+
+.copy-toast.copy-toast--visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ══════════════════════════════════════════════════════════════════════════ */

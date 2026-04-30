@@ -146,3 +146,76 @@ export function initTextAnimation(selector, baseDelay = 0, delayIncrement = 0.05
     });
   });
 }
+
+let copyToastTimer = null;
+
+/** Copie synchrone : fonctionne en local (file://) et conserve le geste utilisateur. */
+function copyWithExecCommand(text) {
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.readOnly = true;
+    ta.style.cssText =
+      'position:fixed;top:0;left:0;width:2px;height:2px;opacity:0;padding:0;border:none;outline:none';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    const ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    return ok;
+  } catch {
+    return false;
+  }
+}
+
+export function initContactEmailCopy() {
+  const btn = document.querySelector('.contact-email');
+  const toast = document.getElementById('copy-toast');
+  if (!btn || !toast) return;
+
+  function showCopyToast(ok) {
+    clearTimeout(copyToastTimer);
+
+    toast.textContent = ok
+      ? 'Copié !'
+      : 'Copie impossible ! Veuillez réessayer.';
+
+    /* Masquage instantané puis réaffichage animé (sinon un 2e clic arrive avant la fin du fade-out). */
+    toast.style.transition = 'none';
+    toast.classList.remove('copy-toast--visible');
+    void toast.offsetHeight;
+
+    requestAnimationFrame(() => {
+      toast.style.transition = '';
+      void toast.offsetHeight;
+      toast.classList.add('copy-toast--visible');
+    });
+
+    copyToastTimer = setTimeout(() => {
+      toast.classList.remove('copy-toast--visible');
+    }, 2600);
+  }
+
+  btn.addEventListener('click', () => {
+    const email = (btn.dataset.email || btn.textContent || '').trim();
+    if (!email) {
+      showCopyToast(false);
+      return;
+    }
+
+    if (copyWithExecCommand(email)) {
+      showCopyToast(true);
+      return;
+    }
+
+    if (navigator.clipboard?.writeText && window.isSecureContext) {
+      navigator.clipboard.writeText(email).then(
+        () => showCopyToast(true),
+        () => showCopyToast(false)
+      );
+    } else {
+      showCopyToast(false);
+    }
+  });
+}
